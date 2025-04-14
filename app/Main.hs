@@ -5,4 +5,4 @@ import           Core
 main :: IO ()
 main = do
   putStrLn socrates
-  putStrLn $ fizzerList [1..100]
+  putStrLn $ fizzerList [1..50]

@@ -52,3 +52,4 @@ cabal.project.local~
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/haskell,visualstudiocode
+.qodo

@@ -39,9 +39,10 @@ n // i = n `mod` i == 0
 -- https://hackage.haskell.org/package/base-4.17.0.0/docs/Control-Applicative.html#t:Alternative
 
 fizzer :: Int -> String
-fizzer n = fromMaybe number $ fold rules
+fizzer n = fromMaybe number $ contains3 <|> fold rules
   where
-    fizz = "Fizz" `whenDivBy` 3 <|> "Fizz" `whenContains` 3
+    contains3 = "Hyland" `whenContains` 3
+    fizz = "Fizz" `whenDivBy` 3
     buzz = "Buzz" `whenDivBy` 5
     bang = "Bang" `whenDivBy` 7
     rules = [fizz, buzz, bang]
